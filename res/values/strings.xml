@@ -6,6 +6,8 @@
     <string name="hello_world">Hello world!</string>
     <string name="name_lable">Your Name:</string>
     <string name="ok_bttn">Ok</string>
-     <string name="click_me">Click Me!</string>
+    <string name="click_me">Click Me!</string>
+     <string name="flower">Hibiscus flower</string>
+     <string name="instruction">Hibiscus flowers might be the most dramatic in the garden and can bloom as large as a child\'s head in gorgeous colors. The hibiscus plant itself is large and dramatic, and it needs plenty of space to show off.</string>
 
 </resources>
