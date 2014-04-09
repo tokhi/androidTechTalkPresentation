@@ -3,6 +3,10 @@ package com.example.tecktalk_android;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -17,6 +21,12 @@ public class MainActivity extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
+	}
+	
+	public void displayNameViaToast(View view) {
+		TextView nameTxtField = (TextView) findViewById(R.id.editText1);
+		Toast.makeText(this, "How you doing "+nameTxtField.getText().toString(), Toast.LENGTH_LONG).show();
+
 	}
 
 }
