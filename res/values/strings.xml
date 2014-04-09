@@ -6,5 +6,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="name_lable">Your Name:</string>
     <string name="ok_bttn">Ok</string>
+     <string name="click_me">Click Me!</string>
 
 </resources>
