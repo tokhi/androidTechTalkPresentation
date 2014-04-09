@@ -4,5 +4,7 @@
     <string name="app_name">TeckTalk_Android</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="name_lable">Your Name:</string>
+    <string name="ok_bttn">Ok</string>
 
 </resources>
