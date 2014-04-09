@@ -13,8 +13,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/button1"
-        android:text="First Name:" />
-
+        android:text="@string/name_lable" />
+		<!--  alignBaseline: align the textview with the button.. no matter where you place them first -->
     <EditText
         android:id="@+id/editText1"
         android:layout_width="fill_parent"
@@ -23,7 +23,9 @@
         android:layout_toLeftOf="@+id/button1"
         android:layout_toRightOf="@+id/textView1"
         android:ems="10" >
-
+	<!--  alignBaseline: align the texteditview with the button.. the same as textview -->
+	<!--  toLeft of toRight of - between two components ( we use the relative adjustment so if we increase the text value of text view and the 
+	the button edit text will be adjusted automatically -->
         <requestFocus />
     </EditText>
 
@@ -37,5 +39,5 @@
         android:text="OK"
         android:onClick="displayNameViaToast"
          />
-
+	 <!-- we want the  button to be on  top right -->
 </RelativeLayout>
