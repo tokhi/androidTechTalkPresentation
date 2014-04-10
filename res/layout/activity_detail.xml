@@ -27,7 +27,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
-            android:text="@string/lorem_txt" />
+            android:text="@string/lorem_txt" 
+            android:textColor="#0000FF"/>
     </ScrollView>
 
 </LinearLayout>

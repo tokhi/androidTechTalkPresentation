@@ -21,32 +21,6 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.flower_layout);
 		
-		Button button1 = (Button) findViewById(R.id.button1);
-        button1.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				goToSecondActivity(v);				
-			}
-		});
-        
-        Button button2 = (Button) findViewById(R.id.button2);
-        button2.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				implicitViewURL(v);				
-			}
-		});
-        
-        Button button3 = (Button) findViewById(R.id.button3);
-        button3.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				implicitSendText(v);				
-			}
-		});
 	}
 	
 	@Override
@@ -59,43 +33,30 @@ public class MainActivity extends Activity {
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		/**
-    	 * Debugin your app
-    	 */
-    	String iteration = "Iteration ";
-    	for (int i = 0; i < 4; i++) {
-    		String msg = iteration+i;
-			Log.d(LOG_TAG, msg);
+		Intent intent = null;
+    	switch (item.getItemId()) {
+		case R.id.activity_two:
+			intent = new Intent(MainActivity.this, DetailActivity.class);
+			startActivity(intent);
+			break;
+			
+		case R.id.activity_exteranl_url:
+			String url = "http://developer.android.com/index.html";
+			intent = new Intent(Intent.ACTION_VIEW,Uri.parse(url));
+			startActivity(intent);
+			break;
+		case R.id.activity_send_msg:
+			intent = new Intent();
+			intent.setAction(Intent.ACTION_SEND);
+			intent.putExtra(Intent.EXTRA_TEXT, "This is the extra text from the flower.MainActivity");
+			intent.setType("text/plain");
+			startActivity(intent);
+			break;
+
+		default:
+			break;
 		}
 		return super.onOptionsItemSelected(item);
-	}
-	
-	public void goToSecondActivity(View v) {
-		// Explicit intent (via intent we do sort of navigations)
-		Intent intent = new Intent(MainActivity.this, DetailActivity.class);
-		startActivity(intent);
-
-	}
-	
-	/**
-	 * implicit activity to browse a URL
-	 */
-	public void implicitViewURL(View v){
-		String url = "http://developer.android.com/index.html";
-		Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse(url));
-		startActivity(intent);
-		
-	}
-	
-	/**
-	 * implicit activity to send a Text
-	 */
-	public void implicitSendText(View v){
-		Intent intent = new Intent();
-		intent.setAction(Intent.ACTION_SEND);
-		intent.putExtra(Intent.EXTRA_TEXT, "This is the extra text from the flower.MainActivity");
-		intent.setType("text/plain");
-		startActivity(intent);
 	}
 	
 	
