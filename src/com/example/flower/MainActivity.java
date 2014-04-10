@@ -2,6 +2,7 @@ package com.example.flower;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -25,7 +26,25 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				goToSecondActivity();				
+				goToSecondActivity(v);				
+			}
+		});
+        
+        Button button2 = (Button) findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				implicitViewURL(v);				
+			}
+		});
+        
+        Button button3 = (Button) findViewById(R.id.button3);
+        button3.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				implicitSendText(v);				
 			}
 		});
 	}
@@ -51,12 +70,34 @@ public class MainActivity extends Activity {
 		return super.onOptionsItemSelected(item);
 	}
 	
-	public void goToSecondActivity() {
+	public void goToSecondActivity(View v) {
 		// Explicit intent (via intent we do sort of navigations)
 		Intent intent = new Intent(MainActivity.this, DetailActivity.class);
 		startActivity(intent);
 
 	}
+	
+	/**
+	 * implicit activity to browse a URL
+	 */
+	public void implicitViewURL(View v){
+		String url = "http://developer.android.com/index.html";
+		Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse(url));
+		startActivity(intent);
+		
+	}
+	
+	/**
+	 * implicit activity to send a Text
+	 */
+	public void implicitSendText(View v){
+		Intent intent = new Intent();
+		intent.setAction(Intent.ACTION_SEND);
+		intent.putExtra(Intent.EXTRA_TEXT, "This is the extra text from the flower.MainActivity");
+		intent.setType("text/plain");
+		startActivity(intent);
+	}
+	
 	
 	/**
 	 * playing with activity life cycles
