@@ -1,7 +1,14 @@
 package com.example.tecktalk_android;
 
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.BaseColumns;
+import android.provider.ContactsContract;
+import android.provider.ContactsContract.CommonDataKinds.Phone;
 import android.app.Activity;
+import android.content.Intent;
+import android.database.Cursor;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
@@ -14,6 +21,18 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		
+		Cursor cursor = getContentResolver().query(
+	            ContactsContract.Contacts.CONTENT_URI, null, null, null, Phone.DISPLAY_NAME + " ASC");
+		
+		String contactID = cursor.getString(cursor.getColumnIndex(BaseColumns._ID));
+		Log.d("MainActivity", contactID);
+		
+		Intent intent = new Intent(Intent.ACTION_VIEW);
+		Uri uri = Uri.withAppendedPath(ContactsContract.Contacts.CONTENT_URI, String.valueOf(contactID));
+		intent.setData(uri);
+		startActivity(intent);
 	}
 
 	@Override
