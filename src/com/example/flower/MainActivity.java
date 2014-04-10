@@ -36,7 +36,14 @@ public class MainActivity extends Activity {
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		Toast.makeText(this, "You tapped the "+item.getTitle(), Toast.LENGTH_LONG).show();
+		/**
+    	 * Debugin your app
+    	 */
+    	String iteration = "Iteration ";
+    	for (int i = 0; i < 4; i++) {
+    		String msg = iteration+i;
+			Log.d(LOG_TAG, msg);
+		}
 		return super.onOptionsItemSelected(item);
 	}
 }
