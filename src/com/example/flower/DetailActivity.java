@@ -3,7 +3,10 @@ package com.example.flower;
 import com.example.tecktalk_android.R;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 
 public class DetailActivity extends Activity{
@@ -25,5 +28,20 @@ public class DetailActivity extends Activity{
 		return super.onOptionsItemSelected(item);
 	}
 	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuItem item = menu.add(R.string.external_url);
+		item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+			
+			@Override
+			public boolean onMenuItemClick(MenuItem item) {
+				String url = "http://developer.android.com/index.html";
+				Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse(url));
+				startActivity(intent);
+				return false;
+			}
+		});
+		return super.onCreateOptionsMenu(menu);
+	}
 
 }
