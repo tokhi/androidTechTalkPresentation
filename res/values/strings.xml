@@ -9,5 +9,5 @@
     <string name="click_me">Click Me!</string>
      <string name="flower">Hibiscus flower</string>
      <string name="instruction">Hibiscus flowers might be the most dramatic in the garden and can bloom as large as a child\'s head in gorgeous colors. The hibiscus plant itself is large and dramatic, and it needs plenty of space to show off.</string>
-
+	<string name="lorem_txt" >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</string>
 </resources>

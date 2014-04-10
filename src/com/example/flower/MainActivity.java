@@ -1,11 +1,13 @@
 package com.example.flower;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.tecktalk_android.R;
 
@@ -18,12 +20,14 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.flower_layout);
 		
-		/**
-		 * Intentional error to test log cat
-		 */
-//		int[] testArray = new int[10];
-//        int number = testArray[11];
-        Log.d(LOG_TAG, "Activity created successfully!");
+		Button button1 = (Button) findViewById(R.id.button1);
+        button1.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				goToSecondActivity();				
+			}
+		});
 	}
 	
 	@Override
@@ -45,5 +49,12 @@ public class MainActivity extends Activity {
 			Log.d(LOG_TAG, msg);
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	
+	public void goToSecondActivity() {
+		// Explicit intent
+		Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+		startActivity(intent);
+
 	}
 }
