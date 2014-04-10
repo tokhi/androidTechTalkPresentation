@@ -52,7 +52,7 @@ public class MainActivity extends Activity {
 	}
 	
 	public void goToSecondActivity() {
-		// Explicit intent
+		// Explicit intent (via intent we do sort of navigations)
 		Intent intent = new Intent(MainActivity.this, DetailActivity.class);
 		startActivity(intent);
 
