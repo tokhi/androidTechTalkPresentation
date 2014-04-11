@@ -24,8 +24,6 @@ public class DetailActivity extends Activity {
 
 		// back button
 		getActionBar().setDisplayHomeAsUpEnabled(true);
-		Uri videoUri = Uri.parse("android.resource://" + this.getPackageName()
-				+ "/" + R.drawable.documentariesandyou);
 		VideoView mVideoView = (VideoView) findViewById(R.id.videoView1);
 		Log.d("MainActivity", Environment.getExternalStorageDirectory()
 				.getAbsolutePath());
@@ -33,7 +31,6 @@ public class DetailActivity extends Activity {
 				"documentariesandyou.mp4");
 		Log.d("MainActivity", clip.getAbsolutePath());
 		if (clip.exists()) {
-			Log.d("MainActivity", videoUri.getPath());
 			mVideoView.setVideoPath(clip.getAbsolutePath());
 			MediaController ctlr = new MediaController(this);
 			ctlr.setMediaPlayer(mVideoView);

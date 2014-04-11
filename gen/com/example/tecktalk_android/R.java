@@ -22,12 +22,10 @@ public final class R {
     }
     public static final class drawable {
         public static final int captain=0x7f020000;
-        public static final int documentariesandyou=0x7f020001;
-        public static final int hibiscus=0x7f020002;
-        public static final int ic_launcher=0x7f020003;
-        public static final int pimp_scarlet=0x7f020004;
-        public static final int terminator=0x7f020005;
-        public static final int twilight=0x7f020006;
+        public static final int hibiscus=0x7f020001;
+        public static final int ic_launcher=0x7f020002;
+        public static final int terminator=0x7f020003;
+        public static final int twilight=0x7f020004;
     }
     public static final class id {
         public static final int action_settings=0x7f080009;
@@ -50,7 +48,6 @@ public final class R {
         public static final int code_layout=0x7f030002;
         public static final int flower_layout=0x7f030003;
         public static final int linear_layout=0x7f030004;
-        public static final int movies_layout=0x7f030005;
     }
     public static final class menu {
         public static final int main=0x7f070000;
