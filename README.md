@@ -31,7 +31,7 @@ Its always important to choose the right SDK and API version because here you de
 [Here in this link](https://developer.android.com/about/dashboards/index.html) you can see the different platform versions which are running on mobile deveices, As writting of this article Jelly Bean has the higher distribution and then its Kitkat.
 
 ######Android Emulator Setup ######
->The Android SDK includes a virtual mobile device emulator that runs on your computer. The emulator lets you prototype, >develop and test Android applications without using a physical device.
+>The Android SDK includes a virtual mobile device emulator that runs on your computer. The emulator lets you prototype, develop and test Android applications without using a physical device.
 
 <a href="http://developer.android.com/tools/devices/emulator.html" target="blank"> Read more... </a>
 
