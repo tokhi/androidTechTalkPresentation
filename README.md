@@ -21,7 +21,7 @@ https://developer.android.com/sdk/installing/adding-packages.html
 
 
 
-######Android Software stack######
+######Android Software Stack######
 ![alt tag](http://www.vogella.com/tutorials/Android/images/xandroidsoftwarelayer10.png.pagespeed.ic.cqHvO0-Uh9.png)
 
 There are many SDK version that you can also build application the version that is used in this project is SDK 4.4/4.4.1 / 4.4.2(KitKat) and API 18/19
@@ -29,6 +29,13 @@ There are many SDK version that you can also build application the version that 
 Its always important to choose the right SDK and API version because here you decide which devices are able to run your app.
 
 [Here in this link](https://developer.android.com/about/dashboards/index.html) you can see the different platform versions which are running on mobile deveices, As writting of this article Jelly Bean has the higher distribution and then its Kitkat.
+
+######Android Emulator Setup ######
+>The Android SDK includes a virtual mobile device emulator that runs on your computer. The emulator lets you prototype, >develop and test Android applications without using a physical device.
+
+<a href="http://developer.android.com/tools/devices/emulator.html" target="blank"> Read more... </a>
+
+
 
 ######Android Project Structure######
 
