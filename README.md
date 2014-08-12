@@ -103,6 +103,37 @@ The control file that describes the nature of the application and each of its co
 This file contains project settings, such as the build target. This file is integral to the project, so maintain it in a source revision control system. To edit project properties in Eclipse, right-click the project folder and select Properties.
 
 
-######Step by step building an App######
+######Building your first App######
 1. Create a mew android project via eclipse which you have already installed.
+2. open/create your `MainActivity` and paste the code below:
 
+
+```java
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+
+public class MainActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+```
+Basically as soon as you [run the project](http://developer.android.com/tools/building/building-eclipse.html#RunningOnEmulatorEclipse) by right clicking on the android project and then run as `Android Application` (first you need to create the [AVD](http://developer.android.com/tools/devices/managing-avds.html)) then `onCreate` method will be invoked and it just renders the content of the `activity_main` (this is an xml file and you can create this file in the `layout` directory.
+for the time being we only have below `TextView` in the layout:
+
+```xml
+ <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello Android" />
+  ```
