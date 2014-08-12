@@ -179,4 +179,4 @@ The Android SDK version might be different according to the version which is ins
 
 You can also use the `Graphical Layout` and just create you desired interface with some drag and drops. To switch the graphical layout just open your xml layout and down the page click on the `Graphical Layout` button.
 
-To learn how to play with the graphical layout [watch this video.](https://www.youtube.com/watch?v=ijGVngb5vj4)
+To learn how to play with the graphical layout <a href="https://www.youtube.com/watch?v=ijGVngb5vj4" target="_blank">watch this video</a>.
