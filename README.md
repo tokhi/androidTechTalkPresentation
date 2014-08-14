@@ -195,3 +195,6 @@ To learn how to play with the graphical layout <a href="https://www.youtube.com/
 
 ######Activity lifecycle######
 ![alt tag](http://developer.android.com/images/activity_lifecycle.png)
+
+
+[Continue reading part two..](https://github.com/tokhi/androidTechTalkPresentation/blob/master/Part2.md)
