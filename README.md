@@ -1,6 +1,6 @@
 Getting Started With Android Development
 ===========================
-This article is a how to for newbies to start building apps in Android. So this article requires you to have a basic java programming and object oriented
+This article is a how to for newbies to start building apps in Android. So this article requires you to have a basic knowledge of java programming and object oriented.
 
 ######Install Android tool######
 For a quick start in developing apps download ADT bundle which includes all essential android SDK components and a version of the Eclipse IDE with built-in ADT (Android Developer Tools) to streamline your Android app development.
