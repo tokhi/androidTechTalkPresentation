@@ -70,3 +70,43 @@ The `alignBaseline` aligns the `EditText` with the button and place the EditText
 
 The `TextView` is also aligned with the `button1`
 
+
+This is how the activity look like:
+
+```java
+package com.example.tecktalk_android;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class MainActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+	
+	public void displayNameViaToast(View view) {
+		TextView nameTxtField = (TextView) findViewById(R.id.editText1);
+		// the toast message display a toast message with the name from the text field
+		Toast.makeText(this, "How you doing "+nameTxtField.getText().toString(), Toast.LENGTH_LONG).show();
+
+	}
+
+}
+
+```
+If you run the project and type your name in the text field then you see a toast message as below:
+
