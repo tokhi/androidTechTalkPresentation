@@ -114,6 +114,11 @@ This file contains project settings, such as the build target. This file is inte
 1. Create a mew android project via eclipse which you have already installed.
 2. open/create your `MainActivity` and paste the code below:
 
+_**Hint**_: 
+
+>If you want to play with [the repository](https://github.com/tokhi/androidTechTalkPresentation) please clone and then checkout the [commits listed here] (https://gist.github.com/tokhi/e704eaafb5f4b0c43637) to play and experience more detail changes stepwise.
+
+> After cloning the repository remove the `bin` directory via `rm` command and then stash your changes `git stash save` and then pull the commit revision e.g; `git pull <commit-id>`
 
 ```java
 package com.example.tecktalk_android;
