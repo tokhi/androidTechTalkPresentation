@@ -110,5 +110,5 @@ public class MainActivity extends Activity {
 }
 
 ```
-If you run the project and type your name in the text field then you see a toast message as below:
+If you run the project and type your name in the text field then you see a toast message
 
